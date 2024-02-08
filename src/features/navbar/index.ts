@@ -15,7 +15,7 @@ window.Webflow.push(() => {
     .progress(1);
 
   ScrollTrigger.create({
-    start: '50vh top',
+    start: '800px top',
     end: 'max',
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse();
