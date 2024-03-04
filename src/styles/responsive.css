@@ -1,0 +1,116 @@
+/* desktop */
+@media screen and (min-width: 992px) {
+  /* remove padding from last and first item */
+  .global_nav_menu_list > li:first-child > a {
+    padding-left: 0rem;
+  }
+  .global_nav_menu_list > li:last-child > a {
+    padding-right: 0rem;
+  }
+  /* reverse order desktop */
+  [block-2-col-reverse='true'] [block-content-item]:nth-child(1) {
+    order: 2;
+  }
+
+  /* utility component attribute */
+  [mobile-only='true'] {
+    display: none;
+  }
+}
+/* tablet */
+@media screen and (max-width: 991px) {
+  [desktop-only='true'] {
+    display: none;
+  }
+
+  /* reverse order mobile */
+  [block-2-col-reverse-mobile='true'] [block-content-item]:nth-child(1) {
+    order: 2;
+  }
+  /* mobile swipe mode */
+  .swiper[data-mobile-swipe-mode='true'] {
+    display: block;
+  }
+  .swiper[data-mobile-swipe-mode='true']
+    + :is(.block_cards_1_list-wrap, .block_cards_1_list, .block_cards_1_flex-list) {
+    display: none;
+  }
+
+  /* global nav */
+  .global_nav_menu_sub-list li:first-child > div {
+    margin-right: 1rem;
+  }
+
+  /* site logo */
+  [site-logo-variant='1'] {
+    width: 8rem;
+  }
+  [site-logo-variant='2'],
+  [site-logo-variant='3'] {
+    width: 6rem;
+  }
+  [site-logo-variant='2'] > img:first-child {
+    width: 1rem;
+    margin-bottom: 0.325rem;
+  }
+
+  /* variables */
+  :root {
+    /* typography */
+    --display--font-size: 4rem;
+    /* others */
+    --page-padding--pp1: 2.75rem;
+    /* spacing */
+    --size--2: 1.75rem;
+    --size--3: 2.5rem;
+    --size--4: 3rem;
+    --size--5: 4rem;
+    --size--6: 5rem;
+    --size--7: 5.5rem;
+    --size--8: 6.5rem;
+    --size--9: 7rem;
+    --size--10: 8rem;
+    --size--12: 10rem;
+    --size--14: 12rem;
+    --size--16: 14rem;
+  }
+}
+/* landscape */
+@media screen and (max-width: 767px) {
+  /* variables */
+  :root {
+    /* typography */
+    --display--font-size: 3.5rem;
+    --p1--font-size: 1.125rem;
+    /* others */
+    --page-padding--pp1: 2rem;
+    /* card spacing */
+    --card-space--main: 2rem;
+    /* section space */
+    --section-vertical--sv3: 2.75rem;
+    /* spacing */
+    --size--3: 2rem;
+    --size--4: 2.5rem;
+    --size--5: 3rem;
+    --size--6: 3.5rem;
+    --size--7: 4rem;
+    --size--8: 4.5rem;
+    --size--9: 5rem;
+    --size--10: 5.5rem;
+    --size--12: 6rem;
+    --size--14: 7rem;
+    --size--16: 8rem;
+  }
+}
+/* portrait */
+@media screen and (max-width: 479px) {
+  /* variables */
+  :root {
+    /* typography */
+    --display--font-size: 3rem;
+    /* others */
+    --page-padding--pp1: 1.5rem;
+    /* card spacing */
+    --card-space--main: 1.5rem;
+  }
+}

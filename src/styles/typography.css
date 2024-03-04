@@ -1,0 +1,193 @@
+/* not supported in WF */
+h1 {
+  --font-size: var(--font-size-1);
+  font-size: var(--font-size);
+  font-weight: var(--h1--font-weight);
+  text-transform: var(--h1--text-transform);
+}
+h2 {
+  --font-size: var(--font-size-2);
+  font-size: var(--font-size);
+  font-weight: var(--h2--font-weight);
+  text-transform: var(--h2--text-transform);
+}
+h3 {
+  --font-size: var(--font-size-3);
+  font-size: var(--font-size);
+  font-weight: var(--h3--font-weight);
+  text-transform: var(--h3--text-transform);
+}
+h4 {
+  --font-size: var(--font-size-4);
+  font-size: var(--font-size);
+  font-weight: var(--h4--font-weight);
+  text-transform: var(--h4--text-transform);
+}
+h5 {
+  --font-size: var(--font-size-5);
+  font-size: var(--font-size);
+  font-weight: var(--h5--font-weight);
+  text-transform: var(--h5--text-transform);
+}
+h6 {
+  --font-size: var(--font-size-6);
+  font-size: var(--font-size);
+  font-weight: var(--h6--font-weight);
+  text-transform: var(--h6--text-transform);
+}
+body {
+  font-weight: var(--body--font-weight);
+  text-transform: var(--body--text-transform);
+}
+
+/* heading */
+[class*='fsh0'] {
+  font-size: var(--display--font-size);
+  font-family: var(--display--font-family);
+  font-weight: var(--display--font-weight);
+  line-height: var(--display--line-height);
+  letter-spacing: var(--display--letter-spacing);
+  text-transform: var(--display--text-transform);
+}
+:is(c, :where([class*='fsh1'])) {
+  --font-size: var(--font-size-1);
+  font-size: var(--font-size);
+  font-family: var(--h1--font-family);
+  line-height: var(--h1--line-height);
+  letter-spacing: var(--h1--letter-spacing);
+  text-transform: var(--h1--text-transform);
+  font-weight: var(--h1--font-weight);
+}
+:is(c, :where([class*='fsh2'])) {
+  --font-size: var(--font-size-2);
+  font-size: var(--font-size);
+  font-family: var(--h2--font-family);
+  line-height: var(--h2--line-height);
+  letter-spacing: var(--h2--letter-spacing);
+  text-transform: var(--h2--text-transform);
+  font-weight: var(--h2--font-weight);
+}
+:is(c, :where([class*='fsh3'])) {
+  --font-size: var(--font-size-3);
+  font-size: var(--font-size);
+  font-family: var(--h3--font-family);
+  line-height: var(--h3--line-height);
+  letter-spacing: var(--h3--letter-spacing);
+  text-transform: var(--h3--text-transform);
+  font-weight: var(--h3--font-weight);
+}
+:is(c, :where([class*='fsh4'])) {
+  --font-size: var(--font-size-4);
+  font-size: var(--font-size);
+  font-family: var(--h4--font-family);
+  line-height: var(--h4--line-height);
+  letter-spacing: var(--h4--letter-spacing);
+  text-transform: var(--h4--text-transform);
+  font-weight: var(--h4--font-weight);
+}
+:is(c, :where([class*='fsh5'])) {
+  --font-size: var(--font-size-5);
+  font-size: var(--font-size);
+  font-family: var(--h5--font-family);
+  line-height: var(--h5--line-height);
+  letter-spacing: var(--h5--letter-spacing);
+  text-transform: var(--h5--text-transform);
+  font-weight: var(--h5--font-weight);
+}
+:is(c, :where([class*='fsh6'])) {
+  --font-size: var(--font-size-6);
+  font-size: var(--font-size);
+  font-family: var(--h6--font-family);
+  line-height: var(--h6--line-height);
+  letter-spacing: var(--h6--letter-spacing);
+  text-transform: var(--h6--text-transform);
+  font-weight: var(--h6--font-weight);
+}
+/* paragraph */
+:is(c, :where([class*='fsp1'])) {
+  font-size: var(--p1--font-size);
+  font-family: var(--p1--font-family);
+  line-height: var(--p1--line-height);
+  letter-spacing: var(--p1--letter-spacing);
+  text-transform: var(--p1--text-transform);
+  font-weight: var(--p1--font-weight);
+}
+:is(c, :where([class*='fsp2'])) {
+  font-size: var(--p2--font-size);
+  font-family: var(--p2--font-family);
+  line-height: var(--p2--line-height);
+  letter-spacing: var(--p2--letter-spacing);
+  text-transform: var(--p2--text-transform);
+  font-weight: var(--p2--font-weight);
+}
+:is(c, :where([class*='fsp3'])) {
+  font-size: var(--p3--font-size);
+  font-family: var(--p3--font-family);
+  line-height: var(--p3--line-height);
+  letter-spacing: var(--p3--letter-spacing);
+  text-transform: var(--p3--text-transform);
+  font-weight: var(--p3--font-weight);
+}
+:is(c, :where([class*='fsp4'])) {
+  font-size: var(--p4--font-size);
+  font-family: var(--p4--font-family);
+  line-height: var(--p4--line-height);
+  letter-spacing: var(--p4--letter-spacing);
+  text-transform: var(--p4--text-transform);
+  font-weight: var(--p4--font-weight);
+}
+:is(c, :where([class*='fsp5'])) {
+  font-size: var(--p5--font-size);
+  font-family: var(--p5--font-family);
+  line-height: var(--p5--line-height);
+  letter-spacing: var(--p5--letter-spacing);
+  text-transform: var(--p5--text-transform);
+  font-weight: var(--p5--font-weight);
+}
+@supports (font-size: 1cqi) {
+  :is(
+      c,
+      :where(
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          [class*='fsh1'],
+          [class*='fsh2'],
+          [class*='fsh3'],
+          [class*='fsh4'],
+          [class*='fsh5'],
+          [class*='fsh6']
+        )
+    ) {
+    --_font-min: var(--font-size) - var(--font-size) * var(--font-size-diff, 0.3);
+
+    font-size: clamp(
+      max(var(--body--font-size), var(--_font-min)),
+      var(--_font-min) + 1cqi,
+      var(--font-size)
+    );
+  }
+}
+/* rich text */
+:is(c, :where([class*='rtx1'])) {
+  --font-size-diff: 0.55;
+}
+/* responsive typography */
+@media screen and (max-width: 991px) {
+  :root {
+    /* 	--font-size-diff: 0.3; */
+  }
+}
+@media screen and (max-width: 767px) {
+  :root {
+    --font-size-diff: 0.295;
+  }
+}
+@media screen and (max-width: 479px) {
+  :root {
+    /* 	--font-size-diff: 0.3; */
+  }
+}

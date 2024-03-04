@@ -14,6 +14,7 @@ const ENTRY_POINTS = [
   'src/features/mailShare/index.ts',
   'src/features/navbar/index.ts',
   'src/features/clearFilters/index.ts',
+  'src/styles/index.css',
 ];
 
 // Config dev serving

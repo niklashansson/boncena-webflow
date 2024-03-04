@@ -1,0 +1,305 @@
+/* default theme */
+:root,
+[theme='1'],
+[theme=''] {
+  --theme--bg1: var(--swatch--primary--light-beige);
+  --theme--fc1: var(--swatch--base--black);
+  --theme--fc2: var(--swatch--primary--dark-brown);
+  --theme--fc3: inherit;
+  --theme--bc1: var(--swatch--primary--gold);
+  --theme--bc2: var(--swatch--primary--dark-beige);
+  /* button gold/primary */
+  --button--bg1: var(--swatch--primary--gold);
+  --button--fc1: var(--swatch--base--black);
+  --button--bc1: var(--swatch--primary--gold);
+  --button--bg1-hover: var(--swatch--primary--light-brown);
+  --button--fc1-hover: var(--swatch--base--black);
+  --button--bc1-hover: var(--swatch--primary--light-brown);
+  /* text link */
+  --link--fc1: var(--swatch--base--black);
+  --link--fc1-hover: var(--swatch--base--black);
+  --link--fc1-active: var(--swatch--base--black);
+  /* tab link */
+  --tab-link--bg1: var(--swatch--transparent);
+  --tab-link--fc1: var(--swatch--primary--dark-brown);
+  --tab-link--bc1: var(--swatch--primary--dark-brown);
+  --tab-link--bg1-hover: var(--swatch--transparent);
+  --tab-link--fc1-hover: var(--swatch--primary--dark-brown);
+  --tab-link--bc1-hover: var(--swatch--primary--dark-brown);
+  --tab-link--bg1-active: var(--swatch--primary--dark-brown);
+  --tab-link--fc1-active: var(--swatch--primary--light-beige);
+  --tab-link--bc1-active: var(--swatch--primary--dark-brown);
+  /* brand logo */
+  --logo--fc1: var(--swatch--primary--light-beige);
+  --logo--bc1: var(--swatch--primary--dark-brown);
+}
+/* dark */
+[theme='2'] {
+  --theme--fc1: var(--swatch--primary--gold);
+  --theme--fc2: var(--swatch--primary--light-beige);
+  --theme--bg1: var(--swatch--base--black);
+  /* text link */
+  --link--fc1: var(--swatch--primary--light-beige);
+  --link--fc1-hover: var(--swatch--primary--light-beige-light);
+  --link--fc1-active: var(--swatch--primary--light-beige);
+  /* tab link */
+  --tab-link--bg1: var(--swatch--transparent);
+  --tab-link--fc1: var(--swatch--primary--gold);
+  --tab-link--bc1: var(--swatch--primary--gold);
+  --tab-link--bg1-hover: var(--swatch--transparent);
+  --tab-link--fc1-hover: var(--swatch--primary--gold);
+  --tab-link--bc1-hover: var(--swatch--primary--gold);
+  --tab-link--bg1-active: var(--swatch--primary--gold);
+  --tab-link--fc1-active: var(--swatch--primary--light-beige);
+  --tab-link--bc1-active: var(--swatch--primary--gold);
+}
+/* brown */
+[theme='3'] {
+  --theme--fc1: var(--swatch--primary--dark-beige);
+  --theme--fc2: var(--swatch--primary--light-beige);
+  --theme--fc3: var(--swatch--primary--gold);
+  --theme--bg1: var(--swatch--primary--dark-brown);
+  --theme--bc1: var(--swatch--primary--light-beige);
+  /* text link */
+  --link--fc1: var(--swatch--primary--light-beige);
+  --link--fc1-hover: var(--swatch--primary--light-beige-light);
+  --link--fc1-active: var(--swatch--primary--light-beige);
+  /* tab link */
+  --tab-link--bg1: var(--swatch--transparent);
+  --tab-link--fc1: var(--swatch--primary--gold);
+  --tab-link--bc1: var(--swatch--primary--gold);
+  --tab-link--bg1-hover: var(--swatch--transparent);
+  --tab-link--fc1-hover: var(--swatch--primary--gold);
+  --tab-link--bc1-hover: var(--swatch--primary--gold);
+  --tab-link--bg1-active: var(--swatch--primary--gold);
+  --tab-link--fc1-active: var(--swatch--primary--light-beige);
+  --tab-link--bc1-active: var(--swatch--primary--gold);
+}
+/* beige */
+[theme='4'] {
+  --theme--fc1: var(--swatch--primary--light-beige);
+  --theme--fc2: var(--swatch--base--black);
+  --theme--bg1: var(--swatch--primary--dark-beige);
+  --theme--bc1: var(--swatch--primary--dark-brown);
+  /* text link */
+  --link--fc1: var(--swatch--primary--dark-brown);
+  --link--fc1-hover: var(--swatch--base--500);
+  --link--fc1-active: var(--swatch--primary--dark-brown);
+}
+/* dark bg image overlay */
+[theme='5'] {
+  --theme--fc1: var(--swatch--primary--light-beige);
+  --theme--fc2: var(--swatch--primary--light-beige);
+  --theme--bg1: var(--swatch--base--black);
+  /* text link */
+  --link--fc1: var(--swatch--primary--light-beige);
+  --link--fc1-hover: var(--swatch--primary--light-beige);
+  --link--fc1-active: var(--swatch--primary--light-beige);
+}
+[theme='5'] img {
+  display: block;
+  opacity: 30%;
+}
+
+/* apply colors */
+:is(c, :where([theme]:not([theme='0']))) {
+  background-color: var(--theme--bg1);
+  color: var(--theme--fc1);
+  border-color: var(--theme--bc1);
+}
+
+/* custom color */
+.button:focus-visible {
+  outline: 1.5px solid var(--button--bg1);
+  outline-offset: 1.75px;
+}
+
+.button:hover:focus-visible {
+  outline: 1.5px solid var(--button--bg1-hover);
+  outline-offset: 1.75px;
+}
+
+:is(c, :where([class*='fc2'])) {
+  color: var(--theme--fc2);
+}
+
+.w--current,
+.is-active {
+  --link--fc1: var(--link--fc1-active);
+  --link--fc1-hover: var(--link--fc1-active);
+  --tab-link--bg1: var(--tab-link--bg1-active);
+  --tab-link--fc1: var(--tab-link--fc1-active);
+  --tab-link--bc1: var(--tab-link--bc1-active);
+  --tab-link--bg1-hover: var(--tab-link--bg1-active);
+  --tab-link--fc1-hover: var(--tab-link--fc1-active);
+  --tab-link--bc1-hover: var(--tab-link--bc1-active);
+}
+
+/* themes */
+
+/* brand logo themes */
+[brand-theme='1'] #text {
+  fill: var(--logo--fc1);
+}
+[brand-theme='1'] #border {
+  fill: var(--logo--bc1);
+}
+[brand-theme='2'] #text {
+  fill: var(--swatch--base--black);
+}
+[brand-theme='2'] #border {
+  fill: var(--swatch--primary--dark-brown);
+}
+
+/* card themes */
+/* default */
+[card-theme='1'],
+[card-theme=''] {
+  --theme--fc1: var(--swatch--base--black);
+  --theme--fc2: var(--swatch--primary--dark-brown);
+  --theme--fc3: var(--swatch--primary--gold);
+  --theme--bg1: var(--swatch--primary--light-beige);
+  --theme--bc1: var(--swatch--primary--light-beige-light);
+  /* text link */
+  --link--fc1: var(--swatch--base--black);
+  --link--fc1-hover: var(--swatch--base--black);
+  --link--fc1-active: var(--swatch--base--black);
+}
+/* image card */
+[card-theme='2'] {
+  --theme--fc1: var(--swatch--primary--light-beige);
+  --theme--fc2: var(--swatch--primary--gold);
+  --theme--bg1: var(--swatch--base--black);
+  --theme--bc1: var(--swatch--primary--light-beige-light);
+}
+
+/* button themes */
+[btn-theme='2'] {
+  --button--bg1: var(--swatch--base--black);
+  --button--fc1: var(--swatch--primary--light-beige);
+  --button--bc1: var(--swatch--base--black);
+  --button--bg1-hover: var(--swatch--primary--gold);
+  --button--fc1-hover: var(--swatch--primary--light-beige);
+  --button--bc1-hover: var(--swatch--primary--gold);
+}
+[btn-theme='3'] {
+  --button--bg1: var(--swatch--primary--dark-brown);
+  --button--fc1: var(--swatch--primary--light-beige);
+  --button--bc1: var(--swatch--primary--dark-brown);
+  --button--bg1-hover: var(--swatch--base--500);
+  --button--fc1-hover: var(--swatch--primary--light-beige);
+  --button--bc1-hover: var(--swatch--base--500);
+}
+[btn-theme='4'] {
+  --button--bg1: var(--swatch--primary--light-beige);
+  --button--fc1: var(--swatch--base--black);
+  --button--bc1: var(--swatch--primary--light-beige);
+  --button--bg1-hover: var(--swatch--primary--light-beige-light);
+  --button--fc1-hover: var(--swatch--base--black);
+  --button--bc1-hover: var(--swatch--primary--light-beige-light);
+}
+
+/* link themes */
+[link-theme='1'] {
+  --link--fc1: var(--swatch--primary--gold);
+  --link--fc1-hover: var(--swatch--primary--gold);
+  --link--fc1-active: var(--swatch--primary--gold);
+}
+/* dark */
+[link-theme='2'] {
+  --link--fc1: var(--swatch--base--black);
+  --link--fc1-hover: var(--swatch--base--black);
+  --link--fc1-active: var(--swatch--base--black);
+}
+/* brown */
+[link-theme='3'] {
+  --link--fc1: var(--swatch--primary--dark-brown);
+  --link--fc1-hover: var(--swatch--base--500);
+  --link--fc1-active: var(--swatch--primary--dark-brown);
+}
+/* light */
+[link-theme='4'] {
+  --link--fc1: var(--swatch--primary--light-beige);
+  --link--fc1-hover: var(--swatch--primary--light-beige-light);
+  --link--fc1-active: var(--swatch--primary--light-beige);
+}
+
+/* tab link themes */
+/* default */
+[tab-link-theme='1'] {
+  --tab-link--bg1: var(--swatch--transparent);
+  --tab-link--fc1: var(--swatch--primary--gold);
+  --tab-link--bc1: var(--swatch--primary--gold);
+  --tab-link--bg1-hover: var(--swatch--transparent);
+  --tab-link--fc1-hover: var(--swatch--primary--light-beige);
+  --tab-link--bc1-hover: var(--swatch--primary--light-beige);
+  --tab-link--bg1-active: var(--swatch--primary--gold);
+  --tab-link--fc1-active: var(--swatch--primary--light-beige);
+  --tab-link--bc1-active: var(--swatch--primary--gold);
+}
+
+/* form themes */
+/* default */
+[form-theme='1'],
+[form-theme=''] {
+  --theme--fc1: var(--swatch--primary--light-beige);
+  --theme--fc2: var(--swatch--primary--light-beige-dark);
+  --theme--fc3: var(--swatch--primary--dark-beige);
+  --theme--bg1: var(--swatch--primary--dark-brown);
+  --link--fc1: var(--swatch--primary--gold);
+  --link--fc1-hover: var(--swatch--primary--gold);
+  --link--fc1-active: var(--swatch--primary--gold);
+  --theme--bc1: var(--swatch--primary--dark-beige);
+  --theme--bc2: var(--swatch--primary--gold);
+}
+
+/* table themes */
+/* default */
+[table-theme='1'],
+[table-theme=''] {
+  --theme--fc1: var(--swatch--primary--dark-brown);
+  --theme--bg1: var(--swatch--primary--dark-beige);
+  --theme--bc1: var(--swatch--primary--dark-brown);
+}
+
+/* logo block themes */
+[logo-theme='1'] {
+  --theme--bg1: var(--swatch--primary--dark-beige);
+  --theme--fc1: var(--swatch--primary--light-beige-light);
+}
+[logo-theme='2'] {
+  --theme--bg1: var(--swatch--base--black);
+  --theme--fc1: var(--swatch--primary--gold);
+}
+[logo-theme='3'] {
+  --theme--bg1: var(--swatch--primary--light-beige);
+  --theme--fc1: var(--swatch--primary--dark-beige);
+}
+[logo-theme='4'] {
+  --theme--bg1: var(--swatch--primary--dark-brown);
+  --theme--fc1: var(--swatch--primary--dark-beige);
+}
+
+/* footer themes */
+/* global footer */
+[footer-theme='1'] {
+  --theme--bg1: var(--swatch--base--black);
+  --theme--fc1: var(--swatch--primary--light-beige);
+  --theme--fc2: var(--swatch--primary--golden);
+  --link--fc1: var(--swatch--primary--gold);
+  --link--fc1-hover: var(--swatch--primary--light-beige);
+  --link--fc1-active: var(--swatch--primary--gold);
+}
+
+/* nav themes */
+/* global nav */
+[nav-theme='1'],
+[nav-theme=''] {
+  --theme--bg1: var(--swatch--base--black);
+  /* bg2 used for hamburger button */
+  --theme--bg2: var(--swatch--primary--gold);
+  --theme--fc1: var(--swatch--primary--light-beige);
+  --link--fc1: var(--swatch--primary--light-beige);
+  --link--fc1-hover: var(--swatch--primary--gold);
+  --link--fc1-active: var(--swatch--primary--light-beige);
+}

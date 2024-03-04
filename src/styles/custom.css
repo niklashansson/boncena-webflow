@@ -1,0 +1,287 @@
+/* button and text link hovers */
+@media (pointer: fine) {
+  :is(.link:hover, .button:hover, [card-theme]:hover)
+    :is([btn-element='icon-leading'], [link-element='icon-leading']) {
+    transform: translateX(-0.2rem);
+  }
+  :is(.link:hover, .button:hover, [card-theme]:hover)
+    :is([btn-element='icon-trailing'], [link-element='icon-trailing']) {
+    transform: translateX(0.2rem);
+  }
+}
+
+/* button size */
+[btn-size='1'] {
+  padding: 0.375rem 0.75rem;
+  font-size: var(--p5--font-size);
+}
+[btn-size='2'] {
+  padding: 0.625rem 1.25rem;
+  font-size: var(--p4--font-size);
+}
+[btn-size='3'] {
+  padding: 1rem 2rem;
+  font-size: var(--p3--font-size);
+}
+/* link size */
+[link-size='1'] {
+  font-size: var(--p5--font-size);
+}
+[link-size='2'] {
+  font-size: var(--p4--font-size);
+}
+[link-size='3'] {
+  font-size: var(--p3--font-size);
+}
+
+/* reset links in button, link, tab link components */
+:is(.button, .link) a {
+  all: unset;
+  position: relative;
+}
+:is(.button, .link, .tab_link_1) a:after {
+  all: unset;
+  position: relative;
+}
+.tab_link_1:after,
+.global_nav_link:after,
+.global_footer_link:after,
+.global_header_site-logo:after,
+.global_footer_social_icon-link:after,
+.modal_share_1_socials_link:after,
+.global_breadcrumbs_1_link:after,
+.w-inline-block:after {
+  all: unset;
+  position: relative;
+}
+
+/* custom underline on default links */
+a:after,
+[class*='clx']:after {
+  display: inline-flex;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  transform: translateY(0.015em);
+  left: 0%;
+  right: 0%;
+  height: 0.05em;
+  background-color: var(--link--fc1);
+}
+a:hover:after,
+[class*='clx']:hover:after {
+  background-color: var(--link--fc1-hover);
+}
+
+/* special border base */
+[special-border-top='true']:before,
+[special-border-bottom='true']:after {
+  content: '';
+  display: block;
+  /* height: 10px; */
+  background: radial-gradient(
+    circle,
+    transparent,
+    transparent 50%,
+    var(--theme--bg1) 50%,
+    var(--theme--bg1) 100%
+  );
+  background-repeat: repeat-x;
+  background-size: 24px 24px;
+  position: absolute;
+  width: 100%;
+  z-index: 997;
+}
+/* special border top */
+[special-border-top='true']:before {
+  top: 0;
+  left: 0;
+  transform: translateY(-9px);
+  background-position: 0px -12px;
+  height: 24px;
+}
+
+/* special border bottom */
+[special-border-bottom='true']:after {
+  bottom: 0;
+  left: 0;
+  background-position: 0px 12px;
+  transform: translateY(9px);
+  height: 24px;
+}
+
+/* tab link active */
+.tab_link_1.is-active:after,
+.tab_link_1.w--current:after,
+.tab_link_1.is-active:after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -3%;
+  left: 50%;
+  transform: translateY(100%) translateX(-50%);
+  width: 0px;
+  height: 0px;
+  background-color: var(--swatch--transparent);
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid var(--tab-link--bg1);
+}
+
+/* global breadcrumbs 1 */
+.global_breadcrumbs_1 > div:last-child > div {
+  display: none;
+}
+.global_breadcrumbs_1 > div:last-child {
+  margin-right: 0;
+}
+
+/* one column only */
+[block-1-col='true'] {
+  grid-template-columns: 1fr;
+}
+[block-1-col='true'] [block-content-item='2'] {
+  display: none;
+}
+
+/* forms */
+label:has(+ :is(input[required], textarea[required]))::after {
+  content: ' *';
+  color: var(--theme--fc1);
+  font-weight: bold;
+}
+
+input::placeholder,
+textarea::placeholder {
+  transition-property: color;
+  transition-duration: 200ms;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+  transition-property: color;
+  transition-duration: 200ms;
+}
+
+input:-internal-autofill-selected {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* recipe 1 component */
+/* remove padding top from first item */
+.block_recipe_1_ingredients_list > div:first-child {
+  padding-top: 0;
+}
+/* remove border and padding from last item */
+.block_recipe_1_ingredients_list > div:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+/* remove padding top from first item */
+.block_recipe_1_instructions_list > div:first-child .block_recipe_1_instructions_form_field {
+  padding-top: 0;
+}
+/* remove border and padding from last item */
+.block_recipe_1_instructions_list > div:last-child .block_recipe_1_instructions_form_field {
+  border: none;
+  padding-bottom: 0;
+}
+
+.table_1 > div:last-child {
+  border: none;
+}
+
+/* site logo variants */
+/* variant 2 */
+[site-logo-variant='2'] {
+  flex-direction: column;
+  transform: translateY(-0.2rem);
+}
+[site-logo-variant='2'] > img:first-child {
+  margin-bottom: 0.625rem;
+  margin-right: 0rem;
+  width: 1.5rem;
+}
+[site-logo-variant='2'] {
+  width: 8rem;
+}
+
+/* variant 3 */
+[site-logo-variant='3'] > img:first-child {
+  display: none;
+}
+[site-logo-variant='3'] {
+  width: 8rem;
+}
+
+/* global header/nav */
+.global_header:has([data-nav-menu-open]):after {
+  z-index: -1;
+}
+
+/* dialog */
+.dialog_instance:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 0;
+}
+.dialog_contain {
+  vertical-align: middle;
+}
+[dialog-instance] {
+  display: none;
+}
+/* share dialog */
+[dialog-active='1'] [dialog-instance='1'] {
+  display: block;
+}
+[dialog-active='1'] {
+  display: block;
+}
+
+dialog:-internal-dialog-in-top-layer {
+  max-width: none;
+  max-height: none;
+}
+
+dialog {
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+[special-border-bottom='true'] + main header .global_breadcrumbs_1 {
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 991px) {
+  .block_cards_1_flex-list:has(.block_cards_1_flex-item:nth-child(3))
+    :is(.card_4, .card_2, .card_3) {
+    height: 100%;
+    grid-column-gap: 0rem;
+    grid-row-gap: 0rem;
+    grid-template-rows: auto minmax(auto, 1fr);
+    grid-template-columns: 1fr;
+    border-right: 1px solid var(--theme--bc1);
+  }
+
+  .block_cards_1_flex-list:has(.block_cards_1_flex-item:nth-child(3))
+    :is(.card_4)
+    :is(.card_4_content) {
+    grid-template-rows: auto auto auto minmax(auto, 1fr);
+  }
+
+  .block_cards_1_flex-list:has(.block_cards_1_flex-item:nth-child(3))
+    :is(.card_3)
+    :is(.card_3_content) {
+    grid-template-rows: auto auto minmax(auto, 1fr);
+  }
+}
+
+header.block_header_2 h1 {
+  font-size: var(--display--font-size);
+}

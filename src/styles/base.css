@@ -1,0 +1,83 @@
+:root {
+  --max-width--none: none;
+  /* typography */
+  --font-size--inherit: inherit;
+  --font-family--inherit: inherit;
+  --font-weight--inherit: inherit;
+  --font-weight--fw1: 400;
+  --font-weight--fw2: 500;
+  --font-weight--fw3: 600;
+  --line-height--inherit: inherit;
+  --letter-spacing--inherit: inherit;
+  --text-transform--none: none;
+  --text-transform--uppercase: uppercase;
+  --text-transform--capitalize: capitalize;
+  --text-transform--lowercase: lowercase;
+  --text-transform--inherit: inherit;
+  /* fluid font size */
+  --type-ratio: 1.225;
+  --font-size-6: calc(var(--body--font-size) * var(--type-ratio));
+  --font-size-5: calc(var(--font-size-6) * var(--type-ratio));
+  --font-size-4: calc(var(--font-size-5) * var(--type-ratio));
+  --font-size-3: calc(var(--font-size-4) * var(--type-ratio));
+  --font-size-2: calc(var(--font-size-3) * var(--type-ratio));
+  --font-size-1: calc(var(--font-size-2) * var(--type-ratio));
+  /* color */
+  --swatch--currentcolor: currentColor;
+  --swatch--inherit: inherit;
+  --swatch--transparent: transparent;
+}
+
+body {
+  overscroll-behavior: none;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+button {
+  background-color: unset;
+  padding: unset;
+}
+img::selection {
+  background: transparent;
+}
+.page_wrap {
+  overflow: clip;
+}
+
+.w-richtext > *:first-child {
+  margin-top: 0;
+}
+.w-richtext > *:last-child {
+  margin-bottom: 0;
+}
+.wf-empty[class*='--'] {
+  padding: 0;
+}
+main section,
+header,
+footer {
+  position: relative;
+  padding-top: var(--section-vertical--sv2);
+  padding-bottom: var(--section-vertical--sv2);
+}
+
+container {
+  display: block;
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  max-width: none;
+  padding-left: var(--page-padding--pp1);
+  padding-right: var(--page-padding--pp1);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+textarea,
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='number'] {
+  -webkit-appearance: none;
+  border-radius: inherit;
+}

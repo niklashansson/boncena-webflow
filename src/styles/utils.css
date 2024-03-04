@@ -1,0 +1,109 @@
+/* section vertical */
+[section-top='0'] {
+  padding-top: var(--section-vertical--sv0);
+}
+[section-bottom='0'] {
+  padding-bottom: var(--section-vertical--sv0);
+}
+[section-vertical='0'] {
+  padding: var(--section-vertical--sv0) 0;
+}
+[section-top='1'] {
+  padding-top: var(--section-vertical--sv1);
+}
+[section-bottom='1'] {
+  padding-bottom: var(--section-vertical--sv1);
+}
+[section-vertical='1'] {
+  padding: var(--section-vertical--sv1) 0;
+}
+[section-top='2'] {
+  padding-top: var(--section-vertical--sv2);
+}
+[section-bottom='2'] {
+  padding-bottom: var(--section-vertical--sv2);
+}
+[section-vertical='2'] {
+  padding: var(--section-vertical--sv2) 0;
+}
+[section-top='3'] {
+  padding-top: var(--section-vertical--sv3);
+}
+[section-bottom='3'] {
+  padding-bottom: var(--section-vertical--sv3);
+}
+[section-vertical='3'] {
+  padding: var(--section-vertical--sv3) 0;
+}
+/* line clamp */
+:is(c, :where([class*='lc1'], [class*='lc2'], [class*='lc3'], [class*='lc4'])) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+[class*='lc2'] {
+  -webkit-line-clamp: 2;
+}
+[class*='lc3'] {
+  -webkit-line-clamp: 3;
+}
+[class*='lc4'] {
+  -webkit-line-clamp: 4;
+}
+/* text wrap */
+[class*='tw1'] {
+  text-wrap: balance;
+}
+/**%{{pointer-events: children}**/
+:is(c, :where([class*='pe1'])) {
+  pointer-events: none;
+}
+:is(c, :where([class*='pe1'] > *)) {
+  pointer-events: auto;
+}
+/**}%**/
+/* cover */
+:is(c, :where([class*='cf1'])) {
+  width: 100%;
+  height: 100%;
+}
+:is(c, :where([class*='ca1'])) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+[class*='hide'] {
+  display: none;
+}
+[list-divider='1'] {
+  display: flex;
+  flex-direction: horizontal;
+  flex-wrap: wrap;
+  gap: var(--gap--gp1);
+}
+[list-divider='1'] > div {
+  border-right: 1px solid var(--swatch--primary--dark-beige);
+  padding-right: var(--gap--gp1);
+}
+[list-divider='1'] > div:last-child {
+  border-right: none;
+  padding-right: none;
+}
+
+/* hide elements with empty children list */
+[hide-empty-list='true']:has(.w-dyn-empty) {
+  display: none;
+}
+[hide-empty-list='true']:has(.w-dyn-items) {
+  display: block;
+}
+/* hide element if sibling element has empty children list */
+[hide-empty-sibling-list='true']:has(+ [hide-empty-list='true'] .w-dyn-empty) {
+  display: none;
+}
+[hide-empty-sibling-list='true']:has(+ [hide-empty-list='true'] .w-dyn-items) {
+  display: block;
+}
