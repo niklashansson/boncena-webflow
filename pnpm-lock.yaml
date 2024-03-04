@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@finsweet/attributes-cmscore':
+    specifier: ^1.13.0
+    version: 1.13.0
+  '@finsweet/attributes-cmsfilter':
+    specifier: ^1.16.2
+    version: 1.16.2
   '@finsweet/ts-utils':
     specifier: ^0.40.0
     version: 0.40.0
@@ -516,6 +522,18 @@ packages:
     resolution: {integrity: sha512-Kn7K8dx/5U6+cT1yEhpX1w4PCSg0M+XyRILPgvwcEBjerFWCwQj5sbr3/VmxqV0JGHCBCzyd6LxypEuehypY1w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@finsweet/attributes-cmscore@1.13.0:
+    resolution: {integrity: sha512-CUOrZ3MV+znqfT8X8vNDKN02uAEIzhVuLPoPWcTMtqBxiOKooKKrJjPgsov/1agBQCKlpM/L/411y2hL9JXXtw==}
+    dependencies:
+      emittery: 1.0.2
+    dev: false
+
+  /@finsweet/attributes-cmsfilter@1.16.2:
+    resolution: {integrity: sha512-8F9nlKeH9KC+nunuZ2+MFl8lOoB3hYBPa+Q32MDy9DNlPFm9787V8LJWMdIFhzovygdzhmsmArGBhKGYva3Slw==}
+    dependencies:
+      just-debounce: 1.1.0
+    dev: false
 
   /@finsweet/eslint-config@2.0.6(@typescript-eslint/eslint-plugin@6.10.0)(@typescript-eslint/parser@6.10.0)(eslint-config-prettier@9.0.0)(eslint-plugin-prettier@5.0.1)(eslint-plugin-simple-import-sort@10.0.0)(eslint@8.53.0)(prettier@3.1.0)(typescript@5.2.2):
     resolution: {integrity: sha512-nJKxUZRbp36fMIvVbBy/y4smygJ/gON7G09YQbJlESDXQamX6ORpQR/nGqSNoVBYAr9JHZqdchsG5LwnUaEEEQ==}
@@ -1186,6 +1204,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /emittery@1.0.2:
+    resolution: {integrity: sha512-PqHdP6JJrxiSXQzCAzII77dVsfyGWu+7V0ghqkaCej2shF1cnIPeFE9kKZcVTqvBjrRMDVOdNXKEYcjxkznS1g==}
+    engines: {node: '>=14.16'}
+    dev: false
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -2086,6 +2109,10 @@ packages:
     optionalDependencies:
       graceful-fs: 4.2.11
     dev: true
+
+  /just-debounce@1.1.0:
+    resolution: {integrity: sha512-qpcRocdkUmf+UTNBYx5w6dexX5J31AKK1OmPwH630a83DdVVUIngk55RSAiIGpQyoH0dlr872VHfPjnQnK1qDQ==}
+    dev: false
 
   /keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}

@@ -1,0 +1,1 @@
+"use strict";(()=>{window.fsAttributes=window.fsAttributes||[];window.fsAttributes.push(["cmsfilter",n=>{let[t]=n,i=t.listInstance.items.length,e=t.resetButtonsData;t.listInstance.on("renderitems",o=>{let r=o.length;i===r?e.forEach((a,s)=>{s.classList.add("is-active")}):e.forEach((a,s)=>s.classList.remove("is-active"))})}]);})();
