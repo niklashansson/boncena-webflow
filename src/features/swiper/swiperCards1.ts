@@ -1,14 +1,14 @@
 import Swiper from 'swiper';
 import type { SwiperOptions } from 'swiper/types/swiper-options';
 
-import { breakpoint } from '$utils/breakpoint';
+// import { breakpoint } from '$utils/breakpoint';
 
 window.Webflow = window.Webflow || [];
 
 window.Webflow.push(() => {
-  const curBreakpoint = breakpoint();
+  // const curBreakpoint = breakpoint();
 
-  if (curBreakpoint === 'desktop') return;
+  // if (curBreakpoint === 'desktop') return;
 
   const className: string = '.swiper.is-cards-1[data-mobile-swipe-mode="true"]';
   const swiperInstances: NodeListOf<HTMLElement> = document.querySelectorAll(className);
