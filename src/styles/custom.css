@@ -280,6 +280,12 @@ dialog {
     :is(.card_3_content) {
     grid-template-rows: auto auto minmax(auto, 1fr);
   }
+
+  .block_cards_1_flex-list:has(.block_cards_1_flex-item:nth-child(3))
+    :is(.card_2)
+    :is(.card_2_content) {
+    grid-template-rows: auto auto auto auto minmax(auto, 1fr);
+  }
 }
 
 header.block_header_2 h1 {

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../bin/live-reload.js", "../../../src/features/copyLink/index.ts"],
+  "sourcesContent": ["new EventSource(`${SERVE_ORIGIN}/esbuild`).addEventListener('change', () => location.reload());\n", "window.Webflow = window.Webflow || [];\n\nwindow.Webflow.push(() => {\n  const modalShareEl = document.querySelector('.modal_share_1') as HTMLElement;\n  const input = modalShareEl?.querySelector('input') as HTMLInputElement;\n  const btn = modalShareEl?.querySelector('.button') as HTMLLinkElement;\n  if (!input || !modalShareEl) return;\n  const { href } = window.location;\n\n  input.value = href;\n\n  btn.addEventListener('click', async () => {\n    try {\n      await navigator.clipboard.writeText(href);\n      btn.textContent = 'Kopierad!';\n\n      setTimeout(() => {\n        btn.textContent = 'Kopiera';\n      }, 2000);\n    } catch (err) {\n      console.error('Failed to copy:', err);\n    }\n  });\n});\n"],
+  "mappings": ";;;AAAA,MAAI,YAAY,GAAG,uBAAY,UAAU,EAAE,iBAAiB,UAAU,MAAM,SAAS,OAAO,CAAC;;;ACA7F,SAAO,UAAU,OAAO,WAAW,CAAC;AAEpC,SAAO,QAAQ,KAAK,MAAM;AACxB,UAAM,eAAe,SAAS,cAAc,gBAAgB;AAC5D,UAAM,QAAQ,cAAc,cAAc,OAAO;AACjD,UAAM,MAAM,cAAc,cAAc,SAAS;AACjD,QAAI,CAAC,SAAS,CAAC;AAAc;AAC7B,UAAM,EAAE,KAAK,IAAI,OAAO;AAExB,UAAM,QAAQ;AAEd,QAAI,iBAAiB,SAAS,YAAY;AACxC,UAAI;AACF,cAAM,UAAU,UAAU,UAAU,IAAI;AACxC,YAAI,cAAc;AAElB,mBAAW,MAAM;AACf,cAAI,cAAc;AAAA,QACpB,GAAG,GAAI;AAAA,MACT,SAAS,KAAK;AACZ,gBAAQ,MAAM,mBAAmB,GAAG;AAAA,MACtC;AAAA,IACF,CAAC;AAAA,EACH,CAAC;",
+  "names": []
+}
