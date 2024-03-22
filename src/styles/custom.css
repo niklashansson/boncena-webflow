@@ -87,27 +87,28 @@ a:hover:after,
     var(--theme--bg1) 100%
   );
   background-repeat: repeat-x;
-  background-size: 24px 24px;
+  background-size: 28px 18px;
   position: absolute;
   width: 100%;
   z-index: 997;
+  height: 18px;
 }
 /* special border top */
 [special-border-top='true']:before {
   top: 0;
   left: 0;
-  transform: translateY(-9px);
-  background-position: 0px -12px;
-  height: 24px;
+  transform: translateY(-50%);
+  background-position-y: -10px;
+  margin-top: 2px;
 }
 
 /* special border bottom */
 [special-border-bottom='true']:after {
   bottom: 0;
   left: 0;
-  background-position: 0px 12px;
-  transform: translateY(9px);
-  height: 24px;
+  transform: translateY(50%);
+  background-position-y: 10px;
+  margin-bottom: 2px;
 }
 
 /* tab link active */
